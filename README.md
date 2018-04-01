@@ -1,3 +1,3 @@
 # Learning Golang Step by Step
 
-[hello go](https://gitpitch.com/allroundtester/Go-Steps/master)
+[hello go](https://gitpitch.com/allroundtesters/Go-Steps/master)
