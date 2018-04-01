@@ -15,7 +15,7 @@
 
 ```shell
 WORKSPACE=`pwd`
-echo "export GOPATH="${WORKSPACE}"">> ~/.zshrc
+echo "export GOPATH=\"${WORKSPACE}\"">> ~/.zshrc
 ```
 
 ---
