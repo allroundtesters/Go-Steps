@@ -1,10 +1,7 @@
-# Tester's Golang Notes
+## Tester's Golang Notes -1 
 
 - Golang Environment Setup
-- Basic Golang
-- Advanced Golang
-- Golang Testing
-- Golang Design Pattern
+- Golang - Hello World
 
 ---
 
