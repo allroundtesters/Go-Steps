@@ -11,21 +11,10 @@
 @title[Golang Environment Setup]
 ## Golang Environment Setup
 - Install Golang
+  * Go to golang.org
+  * Download the latest go installation file
+  * Setup GOROOT(How,just search it to solve)
 - Setup GOPATH
-
----
-
-### Install Golang
-
-- go to golang.org
-- download the latest go installation file
-- Setup GOROOT(How,just search it to solve)
-
----
-
-### Setup GOPATH 
-
-setup GOPATH 
 
 ```shell
 WORKSPACE=`pwd`
@@ -48,6 +37,9 @@ func main() {
 	fmt.Println("Hello World!")
 }
 ```
+
+---
+
 - go build
 
 ```sh
@@ -72,6 +64,8 @@ go run helloworld.go
 - statements
 - comments
 
+---
+
 look at helloworld.go again:
 
 ```go
@@ -88,5 +82,3 @@ func main() {
 	fmt.Println("Hello World!")
 }
 ```
-
----
