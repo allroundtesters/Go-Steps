@@ -16,13 +16,13 @@ fi
 
 
 echo "start checkout a new branch ${BRANCH_NAME}"
-git checkout -b $1
+git checkout -b ${BRANCH_NAME}
 
 rm -rf steps
 rm PITCHME.md
-cp docs/$2-$1.md PITCHME.md
+cp -f docs/$INDEX-$BRANCH_NAME.md PITCHME.md
 
 git add .
-git commit -m "init $1 branch"
-git push origin $1
+git commit -m "init $BRANCH_NAME branch"
+git push origin $BRANCH_NAME
 

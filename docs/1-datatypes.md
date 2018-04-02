@@ -104,6 +104,8 @@ const Usage:
 
 ```go
 
+package main 
+
 const PI = 3.14
 
 ```
