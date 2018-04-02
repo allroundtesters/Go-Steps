@@ -1,81 +1,112 @@
-## Tester's Golang Notes -1 
+## Tester's Golang Notes-2
 
-- Golang Environment Setup
-- Golang - Hello World
+Golang Data Types:
 
----
-
-@title[Golang Environment Setup]
-## Golang Environment Setup
-- Install Golang
-  * Go to golang.org
-  * Download the latest go installation file
-  * Setup GOROOT(How,just search it to solve)
-- Setup GOPATH
-
-```shell
-WORKSPACE=`pwd`
-echo "export GOPATH=\"${WORKSPACE}\"">> ~/.zshrc
-```
+- bool
+- number
+  * int
+  * float32/float64
+  * ......
+- string
 
 ---
 
-@title[Run Golang]
-## Run Golang script
-
-- helloworld.go
-
-```go
-package main
-
-import "fmt"
-
-func main() {
-	fmt.Println("Hello World!")
-}
-```
+- inheritance
+  * Pointer
+  * Array
+  * struct
+  * Channel
+  * Function
+  * Slice
+  * interface
+  * Map
+  * ........
 
 ---
 
-- go build
-
-```sh
-go build helloworld.go
-```
-
-- go run
-
-```sh
-go run helloworld.go 
-
-```
+- others
+  * byte
+  * rune, like int32
+  * uint
+  * int
+  * uintptr
 
 ---
 
-@title[Elements in Golang]
-## Elements in Golang
+### Simple Example for Types
 
-- package declaration
-- imported package
-- function
-- statements
-- comments
-
----
-
-look at helloworld.go again:
 
 ```go
 
-//package declaration
-package main
+import (
+	"math/cmplx"
+	"fmt"
+)
 
-//import package
-import "fmt"
+//global declaration
+var (
+	ToBe      bool       = false
+	TrueStuff            = true
+	MaxInt    uint64     = 1<<64 - 1
+	z         complex128 = cmplx.Sqrt(-5 + 12i)
+)
 
-//function and main entry
 func main() {
-	//statement
-	fmt.Println("Hello World!")
+	fmt.Println(ToBe)
+	fmt.Println(TrueStuff)
+	fmt.Println(MaxInt)
+	fmt.Println(z)
 }
 ```
+----
+
+## Golang Variable
+
+Variable: 
+
+```go
+
+var identifier type
+
+```
+---
+
+mulitple variations :
+
+```go
+
+var (
+	s         string     = "string"
+	ToBe      bool       = false
+	TrueStuff            = true
+	MaxInt    uint64     = 1<<64 - 1
+	z         complex128 = cmplx.Sqrt(-5 + 12i)
+	a, b, c              = 1, 2, 3
+)
+
+```
+
+---
+
+error:
+
+```go
+
+// only valid in a function
+//b := "golang" //error here
+//c := 4.17
+
+```
+
+### Golang CONST
+
+const Usage:
+
+```go
+
+package main 
+
+const PI = 3.14
+
+```
+
