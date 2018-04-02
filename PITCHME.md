@@ -58,7 +58,8 @@ func main() {
 	fmt.Println(z)
 }
 ```
-----
+
+---
 
 ## Golang Variable
 
@@ -69,9 +70,10 @@ Variable:
 var identifier type
 
 ```
+
 ---
 
-mulitple variations :
+multiple variations :
 
 ```go
 
@@ -97,6 +99,8 @@ error:
 //c := 4.17
 
 ```
+
+---
 
 ### Golang CONST
 
