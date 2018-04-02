@@ -1,10 +1,10 @@
-package main
+package __control_flow
 
 import (
 	"fmt"
 )
 
-
+//todo: for in map/dict
 func main(){
 	alphas := []string{"abc", "def", "ghi"}
 

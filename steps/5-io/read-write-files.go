@@ -9,17 +9,18 @@ import (
 )
 
 func main(){
-	fileName := "../tmp/test.txt"
+	fileName := "steps/tmp/test.txt"
 	//
 	content, err := ioutil.ReadFile(fileName)
 
 	if err!=nil {
-		log.Fatalln("Eror Reading file ",fileName)
+		log.Fatalln("Error Reading file ",fileName)
 	}
 
 	fmt.Println(string(content))
 
-	filePath := "../tmp/test.txt"
+	//open file to read
+	filePath := "steps/tmp/test.txt"
 	f,_:=os.Open(filePath)
 	defer f.Close()
 
@@ -34,7 +35,7 @@ func main(){
 		log.Fatal(err)
 	}
 
-	f,err = os.Create("output.txt")
+	f,err = os.Create("steps/tmp/output.txt")
 	if err!=nil{
 		log.Fatalln("Error Creating file:",err)
 	}
@@ -45,7 +46,7 @@ func main(){
 		if err1 != nil{
 			log.Fatalln("Error Writing string:",err1)
 		}
-		fmt.Println("%d",bytes)
+		fmt.Printf("%d",bytes)
 	}
 
 }

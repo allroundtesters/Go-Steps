@@ -11,7 +11,7 @@ func main() {
 	lower := strings.ToLower(str)
 	fmt.Println("This is lower case string:"+ lower)
 
-	if(strings.Contains(lower,"this")){
+	if strings.Contains(lower,"this") {
 		fmt.Println("Yes, it is lower this")
 	}
 
@@ -22,5 +22,7 @@ func main() {
 	fmt.Println(words)
 
 	fields:=strings.Fields(sentence)
+	fmt.Println(len(fields))
 	fmt.Println(fields)
+
 }
