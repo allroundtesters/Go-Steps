@@ -1,81 +1,86 @@
-## Tester's Golang Notes -1 
+## Golang Control Flow
+***tester's notes***
 
-- Golang Environment Setup
-- Golang - Hello World
+- if/else
+- for-loop
+- for-case
 
----
 
-@title[Golang Environment Setup]
-## Golang Environment Setup
-- Install Golang
-  * Go to golang.org
-  * Download the latest go installation file
-  * Setup GOROOT(How,just search it to solve)
-- Setup GOPATH
-
-```shell
-WORKSPACE=`pwd`
-echo "export GOPATH=\"${WORKSPACE}\"">> ~/.zshrc
-```
-
----
-
-@title[Run Golang]
-## Run Golang script
-
-- helloworld.go
-
-```go
-package main
-
-import "fmt"
-
-func main() {
-	fmt.Println("Hello World!")
-}
-```
-
----
-
-- go build
-
-```sh
-go build helloworld.go
-```
-
-- go run
-
-```sh
-go run helloworld.go 
-
-```
-
----
-
-@title[Elements in Golang]
-## Elements in Golang
-
-- package declaration
-- imported package
-- function
-- statements
-- comments
-
----
-
-look at helloworld.go again:
+### if else 
 
 ```go
 
-//package declaration
-package main
-
-//import package
-import "fmt"
-
-//function and main entry
-func main() {
-	//statement
-	fmt.Println("Hello World!")
+num :=3
+if num==1{
+	fmt.Println("One")
+}else if num==2{
+    fmt.Println("Two")
+}else {
+	fmt.Println("More than Three")
 }
+	
+```
+
+### for-loop
+
+for :
+
+```go
+
+	alphas := []string{"abc", "def", "ghi"}
+
+	for i := 0; i < len(alphas); i++ {
+		fmt.Println(alphas[i])
+		fmt.Println("%d:%s \n", i, alphas[i])
+	}
+	
+```
+---
+
+for-loop: index and val:
+
+```go
+
+	for i, val := range alphas {
+		fmt.Printf("%d:%s \n", i, val)
+	}
+
+```
+
+---
+
+for-loop: index:
+
+```go
+
+	for i := range alphas {
+		fmt.Println(i)
+	}
+
+```
+
+---
+
+for-loop: value only:
+
+```go
+
+	for _, val := range alphas {
+		fmt.Println(val)
+	}
+
+```
+
+---
+
+for like while loop:
+
+```go
+
+	x := 0
+	for x < 10 {
+		fmt.Println(x)
+		x++
+	}
+
 ```
