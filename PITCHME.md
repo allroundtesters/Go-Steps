@@ -1,94 +1,51 @@
-## Golang Basic Data Structure 
+## Golang Function
 
-Golang Basic Data Structure:
+- Define a Function
+- Elements in a Function
 
-- array
-- dict
-- structure
+### Define A Function
 
-### Work With Array
+A function with:
 
-- init
-- append
-- slice
-
-### Array: init
+1. ```func``` keyword to start a function block
+2. define function Name, here is Say
+3. define arguments: here is only one,s which is ```stirng``` type
+4. define return type, here is string too
 
 ```go
 
-var arrInt []int
+func Say(s string) string{
+	return "Hello "+ s
+}
+
+```
+
+### Elements in a Function
+
+- ```func``` keyword
+- function name
+- arguments
+- return type, and multiple return values
+- function code block
+- could name a return name
+
+```go
+
+func Divide2(x,y float64) (q,r float64){
+	q = math.Trunc(x/y)
+	r = math.Mod(x,y)
+	return q,r
+}
 
 ```
 
 ---
 
-### Array: append
-
-here is an example of append usage:
+with return name:
 
 ```go
-import "fmt"
-
-func printSlice(s string, x []int) {
-	fmt.Printf("%s len=%d cap=%d %v %p\n", s, len(x), cap(x), x,x)
+func Say2(s string) (phrase string){
+	phrase = "Hello "+ s
+	return phrase
 }
-
-func main() {
-	var a []int
-	printSlice("a", a)
-
-	a = append(a, 0)
-	printSlice("a", a)
-
-	a = append(a, 1)
-	printSlice("a", a)
-
-	a = append(a, 2, 3, 4)
-	printSlice("a", a)
-
-	a=append(a,5)
-	printSlice("a",a)
-}
-```
-
-*** when reslice, the pointer is different ***
-
----
-
-### cap VS len
-
-- cap: how many elements of slice can contain
-- len: how many elements of slice have now
-- append return different slice when resliced
-
----
-
-### work with slice
-
-python like:
-
-```go
-
-var alphas = []string{"abc", "def", "ghi", "jkl"}
-alpha2 := alphas[1:3]
-fmt.Println(alpha2)	
-
-```
-
----
-
-for loop: 
-
-```go
-
-func elemExists(s string, a []string) bool {
-	for _, v := range a {
-		if v == s {
-			return true
-		}
-	}
-
-	return false
-}
-
 ```
