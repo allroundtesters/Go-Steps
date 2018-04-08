@@ -8,10 +8,11 @@ func main() {
 	var elements [] int
 	var alphas = []string{"abc", "def", "ghi", "jkl"}
 	elements = append(elements, 123)
+	fmt.Printf("%v %p\n", elements,elements)
 	elements = append(elements, 456)
-	fmt.Println("%v \n", elements)
+	fmt.Printf("%v %p\n", elements,elements)
 	alphas = append(alphas, "pqr", "stu")
-	fmt.Println("%v \n", alphas)
+	fmt.Printf("%v \n", alphas)
 	fmt.Println("alphas size is :", len(alphas))
 	fmt.Println(alphas[0])
 	fmt.Println(alphas[1])
@@ -20,7 +21,7 @@ func main() {
 	fmt.Println(alpha2)
 
 	if (elemExists("def", alphas)) {
-		fmt.Println("Exists!!!")
+		fmt.Printf("Exists!!!")
 	}
 
 }
