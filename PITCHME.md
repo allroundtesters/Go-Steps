@@ -1,94 +1,86 @@
-## Golang Basic Data Structure 
+## Golang Control Flow
+***tester's notes***
 
-Golang Basic Data Structure:
+- if/else
+- for-loop
+- for-case
 
-- array
-- dict
-- structure
 
-### Work With Array
-
-- init
-- append
-- slice
-
-### Array: init
+### if else 
 
 ```go
 
-var arrInt []int
-
-```
-
----
-
-### Array: append
-
-here is an example of append usage:
-
-```go
-import "fmt"
-
-func printSlice(s string, x []int) {
-	fmt.Printf("%s len=%d cap=%d %v %p\n", s, len(x), cap(x), x,x)
+num :=3
+if num==1{
+	fmt.Println("One")
+}else if num==2{
+    fmt.Println("Two")
+}else {
+	fmt.Println("More than Three")
 }
-
-func main() {
-	var a []int
-	printSlice("a", a)
-
-	a = append(a, 0)
-	printSlice("a", a)
-
-	a = append(a, 1)
-	printSlice("a", a)
-
-	a = append(a, 2, 3, 4)
-	printSlice("a", a)
-
-	a=append(a,5)
-	printSlice("a",a)
-}
+	
 ```
 
-*** when reslice, the pointer is different ***
+### for-loop
 
----
-
-### cap VS len
-
-- cap: how many elements of slice can contain
-- len: how many elements of slice have now
-- append return different slice when resliced
-
----
-
-### work with slice
-
-python like:
+for :
 
 ```go
 
-var alphas = []string{"abc", "def", "ghi", "jkl"}
-alpha2 := alphas[1:3]
-fmt.Println(alpha2)	
+	alphas := []string{"abc", "def", "ghi"}
 
+	for i := 0; i < len(alphas); i++ {
+		fmt.Println(alphas[i])
+		fmt.Println("%d:%s \n", i, alphas[i])
+	}
+	
 ```
-
 ---
 
-for loop: 
+for-loop: index and val:
 
 ```go
 
-func elemExists(s string, a []string) bool {
-	for _, v := range a {
-		if v == s {
-			return true
-		}
+	for i, val := range alphas {
+		fmt.Printf("%d:%s \n", i, val)
 	}
 
-	return false
-}
+```
+
+---
+
+for-loop: index:
+
+```go
+
+	for i := range alphas {
+		fmt.Println(i)
+	}
+
+```
+
+---
+
+for-loop: value only:
+
+```go
+
+	for _, val := range alphas {
+		fmt.Println(val)
+	}
+
+```
+
+---
+
+for like while loop:
+
+```go
+
+	x := 0
+	for x < 10 {
+		fmt.Println(x)
+		x++
+	}
 
 ```
