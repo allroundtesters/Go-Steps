@@ -1,81 +1,94 @@
-## Tester's Golang Notes -1 
+## Golang Basic Data Structure 
 
-- Golang Environment Setup
-- Golang - Hello World
+Golang Basic Data Structure:
 
----
+- array
+- dict
+- structure
 
-@title[Golang Environment Setup]
-## Golang Environment Setup
-- Install Golang
-  * Go to golang.org
-  * Download the latest go installation file
-  * Setup GOROOT(How,just search it to solve)
-- Setup GOPATH
+### Work With Array
 
-```shell
-WORKSPACE=`pwd`
-echo "export GOPATH=\"${WORKSPACE}\"">> ~/.zshrc
-```
+- init
+- append
+- slice
 
----
-
-@title[Run Golang]
-## Run Golang script
-
-- helloworld.go
-
-```go
-package main
-
-import "fmt"
-
-func main() {
-	fmt.Println("Hello World!")
-}
-```
-
----
-
-- go build
-
-```sh
-go build helloworld.go
-```
-
-- go run
-
-```sh
-go run helloworld.go 
-
-```
-
----
-
-@title[Elements in Golang]
-## Elements in Golang
-
-- package declaration
-- imported package
-- function
-- statements
-- comments
-
----
-
-look at helloworld.go again:
+### Array: init
 
 ```go
 
-//package declaration
-package main
+var arrInt []int
 
-//import package
+```
+
+---
+
+### Array: append
+
+here is an example of append usage:
+
+```go
 import "fmt"
 
-//function and main entry
-func main() {
-	//statement
-	fmt.Println("Hello World!")
+func printSlice(s string, x []int) {
+	fmt.Printf("%s len=%d cap=%d %v %p\n", s, len(x), cap(x), x,x)
 }
+
+func main() {
+	var a []int
+	printSlice("a", a)
+
+	a = append(a, 0)
+	printSlice("a", a)
+
+	a = append(a, 1)
+	printSlice("a", a)
+
+	a = append(a, 2, 3, 4)
+	printSlice("a", a)
+
+	a=append(a,5)
+	printSlice("a",a)
+}
+```
+
+*** when reslice, the pointer is different ***
+
+---
+
+### cap VS len
+
+- cap: how many elements of slice can contain
+- len: how many elements of slice have now
+- append return different slice when resliced
+
+---
+
+### work with slice
+
+python like:
+
+```go
+
+var alphas = []string{"abc", "def", "ghi", "jkl"}
+alpha2 := alphas[1:3]
+fmt.Println(alpha2)	
+
+```
+
+---
+
+for loop: 
+
+```go
+
+func elemExists(s string, a []string) bool {
+	for _, v := range a {
+		if v == s {
+			return true
+		}
+	}
+
+	return false
+}
+
 ```
