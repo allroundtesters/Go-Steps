@@ -1,4 +1,4 @@
-package __control_flow
+package main
 
 import (
 	"fmt"
@@ -12,12 +12,12 @@ func main() {
 	for {
 		select {
 		case <-tick:
-			fmt.Println("tick")
+			fmt.Printf("tick")
 		case <-boom:
-			fmt.Println("BOOM!")
+			fmt.Printf("BOOM!")
 			return
 		default:
-			fmt.Println("           .")
+			fmt.Printf("           .")
 			time.Sleep(50 * time.Millisecond)
 		}
 	}
