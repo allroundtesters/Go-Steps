@@ -1,9 +1,24 @@
 package main
 
 import (
+	"os"
+	"flag"
 	"fmt"
 	"strings"
 )
+
+func getTheFlag() *string{
+	return flag.String("Hello","World!","again")
+}
+var name string
+func init(){
+	flag.CommandLine = flag.NewFlagSet("",flag.ExitOnError)
+	flag.CommandLine.Usage=func(){
+		fmt.Fprintf(os.Stderr,"Usage of %s:\n","question")
+		flag.PrintDefaults()
+	}
+	flag.StringVar(&name,"name","everyone","the greeting object.")	
+}
 
 func main() {
 	
@@ -24,5 +39,10 @@ func main() {
 	fields:=strings.Fields(sentence)
 	fmt.Println(len(fields))
 	fmt.Println(fields)
+
+
+	// var name = getTheFlag()
+	flag.Parse()
+	fmt.Printf(name)
 
 }

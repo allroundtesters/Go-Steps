@@ -23,6 +23,10 @@ func Say2(s string) (phrase string) {
 	return phrase
 }
 
+// func Say3(s string)(phrase string,err error){
+// 	phrase="Hello "+s
+// 	return
+// }
 //multiple parameters and return multiple return values,tuple,also named return value
 func Divide(x, y float64) (float64, float64) {
 	q := math.Trunc(x / y)

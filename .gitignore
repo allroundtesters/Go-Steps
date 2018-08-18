@@ -1,8 +1,7 @@
-
+.idea/
 ### Java template
 # Compiled class file
 *.class
-
 # Log file
 *.log
 
@@ -214,3 +213,5 @@ tmp/
 .cache-main
 .scala_dependencies
 .worksheet
+bin/
+src/
