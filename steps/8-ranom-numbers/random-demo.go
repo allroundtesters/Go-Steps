@@ -43,5 +43,11 @@
 	 // The NormFloat64 method returns a number based on Normal distrib
 	 // mean=0, stddev=1 -- if called enough and plotted will give bell curve
 	 fmt.Println("Normalized:", rand.NormFloat64())
+
+	 fmt.Printf("%d-%b %#X\n",42,42,42) //binary
+
+	 for i:=60;i<122;i++{  //UTF-8
+		 fmt.Printf("%q",i)
+	 }
  }
  
