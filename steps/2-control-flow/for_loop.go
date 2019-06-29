@@ -31,4 +31,15 @@ func main() {
 		fmt.Println(x)
 		x++
 	}
+
+	var sum int =0
+	for ;sum<100;{
+		fmt.Println(sum)
+		sum+=sum+1
+	}
+	fmt.Println(sum)
+	//works
+	for {
+
+	}
 }
