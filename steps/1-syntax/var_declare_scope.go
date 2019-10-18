@@ -2,9 +2,21 @@ package main
 
 import (
 	"fmt"
+	"unsafe"
 )
 
 var block="package"
+
+const const_str  = "const string"
+
+const (
+	a_c = "abc"
+	n_c= len(a_c)
+	c_c = unsafe.Sizeof(a_c)
+	a_iota =iota
+	n_iota =iota
+	v_iota =iota
+)
 func main(){
 	fmt.Println("Current Block value is "+block)
 	block:="function"
@@ -23,6 +35,12 @@ func main(){
 	fmt.Println(d,e,f)
 
 	//without var can be used in a func
-	no_var_msg:="msg"
-	fmt.Println(no_var_msg)
+	noVarMsg :="msg"
+	fmt.Println(noVarMsg)
+	fmt.Println(const_str)
+
+	fmt.Println(n_c)
+	fmt.Println(c_c)
+	fmt.Println(a_iota)
+	fmt.Println(n_iota)
 }
