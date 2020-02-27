@@ -31,4 +31,16 @@ func main() {
 	m["test"]=Vertex{10.000,-90.000}
 	fmt.Println(m)
 	fmt.Println(math.Nextafter(2,4))
+	t :=make(map[string]int)
+	t["Answer"] = 42
+	fmt.Println("The value:", m["Answer"])
+
+	t["Answer"] = 48
+	fmt.Println("The value:", m["Answer"])
+
+	delete(t, "Answer")
+	fmt.Println("The value:", m["Answer"])
+
+	v, ok := t["Answer"]
+	fmt.Println("The value:", v, "Present?", ok)
 }
