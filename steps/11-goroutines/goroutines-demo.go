@@ -1,21 +1,28 @@
 package main
 
 import (
-	"time"
 	"fmt"
+	"time"
 )
 
-func PrintSlowly(s string, n int){
-	for i:=0;i<n;i++ {
-		fmt.Println(i,s)
-		time.Sleep(300*time.Microsecond)
+func say(s string){
+	for i:=0;i<5 ;i++  {
+		time.Sleep(100*time.Microsecond)
+		fmt.Println(s)
 	}
 }
 
-func main(){
-	PrintSlowly("directly functioning",3)
-	go PrintSlowly("Red goroutine",3)
-	go PrintSlowly("Green goroutine",3)
+func PrintSlowly(s string, n int) {
+	for i := 0; i < n; i++ {
+		fmt.Println(i, s)
+		time.Sleep(300 * time.Microsecond)
+	}
+}
+
+func main() {
+	PrintSlowly("directly functioning", 3)
+	go PrintSlowly("Red goroutine", 3)
+	go PrintSlowly("Green goroutine", 3)
 
 	// Call an anonymous function as a go routine.
 	go func(ss string, nn int) {
@@ -28,4 +35,7 @@ func main(){
 	var input string
 	fmt.Scanln(&input) // Just push RETURN to finish the program.
 	fmt.Println("DONE.")
+
+	go say("world")
+	say("hello")
 }

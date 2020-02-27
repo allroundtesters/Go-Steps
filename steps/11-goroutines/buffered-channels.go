@@ -15,4 +15,5 @@ func main(){
 	v,ok := <-c 
 	print(v)
 	print(ok)
+	print("end ......")
 }
