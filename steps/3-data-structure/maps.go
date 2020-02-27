@@ -3,10 +3,20 @@ package main
 import (
 	"fmt"
 	"math"
+	"strings"
 )
 
 type Vertex struct {
 	Lat, Long float64
+}
+
+func WordCount(s string) map[string] int {
+	words :=strings.Fields(s)
+	m:=make(map[string]int)
+	for _,word :=range words{
+		m[word]++
+	}
+	return m
 }
 
 var m = map[string]Vertex{
@@ -15,6 +25,8 @@ var m = map[string]Vertex{
 }
 
 func main() {
+	var result = WordCount("test test tds tesds")
+	fmt.Println(result)
 	fmt.Println(m)
 	m["test"]=Vertex{10.000,-90.000}
 	fmt.Println(m)
