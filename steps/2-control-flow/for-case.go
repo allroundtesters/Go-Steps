@@ -21,4 +21,15 @@ func main() {
 			time.Sleep(50 * time.Millisecond)
 		}
 	}
+
+	today:=time.Now()
+	var t int = today.Day()
+	switch t {
+	case 5,10,15:
+		fmt.Println("clean it")
+	case 25,26,27:
+		fmt.Println("have a rest")
+	case 31:
+		fmt.Println("No information")
+	}
 }

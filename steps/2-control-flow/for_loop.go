@@ -39,7 +39,7 @@ func main() {
 	}
 	fmt.Println(sum)
 	//works
-	for {
-
-	}
+	//for {
+	//
+	//}
 }

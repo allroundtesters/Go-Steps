@@ -1,24 +1,26 @@
 package main
 
-type Human struct {
-	name string
-	age int
-	phone string
+import "fmt"
+
+type Employee interface {
+	PrintName() string
+	PrintAddress() string
+	PrintSalary(basic int,tax int) float64
 }
 
-type Student struct {
-	Human
-	school string
-	loan float32
+type Emp int
+func (e Emp) PrintName(name string) {
+	fmt.Println("Employee Id: \t",e)
+	fmt.Println("Employee Name: \t",name)
 }
 
-type Employee struct {
-	Human
-	company string
-	money float32
+func(e Emp) PrintSalary(basic int,tax int) float64{
+	var salary = (basic*tax) /100
+	return float64(basic - salary)
 }
 
-func (h *Human) SayHi()  {
-	println("this is from Human")
+func main() {
+	//var e1 Employee
+	//e1 = Emp(1)
+	//e1.PrintName("test")
 }
-
