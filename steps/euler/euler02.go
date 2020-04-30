@@ -16,6 +16,7 @@ import (
 	"fmt"
 )
 const MAX=40000
+
 func isEven(num int) bool{
 	if(num%2==0){
 		return true
