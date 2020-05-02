@@ -2,6 +2,7 @@ package main
 
 import (
 	"fmt"
+	"runtime"
 )
 func main(){
 	num :=1
@@ -25,6 +26,17 @@ func main(){
 	case num>2:
 	fmt.Println("More than two")
 	default:
-		fmt.Println("Don't know what happened") 
+		fmt.Println("Don't know what happened")
+	}
+
+	switch  os:=runtime.GOOS ; os{
+	case "darwin":
+		fmt.Println("OS X.")
+	case "linux":
+		fmt.Println("Linux.")
+	default:
+		// freebsd, openbsd,
+		// plan9, windows...
+		fmt.Printf("%s.", os)
 	}
 }

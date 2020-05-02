@@ -8,14 +8,13 @@ import (
 func main() {
 	tick := time.Tick(100 * time.Millisecond)
 	boom := time.After(500 * time.Millisecond)
-
+	//todo: select case, for loop
 	for {
 		select {
 		case <-tick:
 			fmt.Printf("tick")
 		case <-boom:
 			fmt.Printf("BOOM!")
-			return
 		default:
 			fmt.Printf("           .")
 			time.Sleep(50 * time.Millisecond)
