@@ -2,7 +2,7 @@
     "go.autocompleteUnimportedPackages": true,
     "go.buildOnSave": "workspace",
     "go.inferGopath": false,
-    "go.toolsGopath": "~/workspace/go",
+    "go.toolsGopath": "~/go",
     "[go]":{
         "editor.formatOnSave": false
     }
