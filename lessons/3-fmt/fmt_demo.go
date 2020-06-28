@@ -31,7 +31,7 @@ func main() {
 	var buf bytes.Buffer
 	c.LogOutput = &buf
 	if strings.Contains(buf.String(), "component finished") {
-		_, _ = fmt.Fprintln("unexpected log output: %s", buf.String())
+		fmt.Print("unexpected log output: %s", buf.String())
 	}
 }
 
