@@ -50,3 +50,8 @@ class SuperCoolComponent extends React.Component {
   }
 }
 ```
+
+
+## The Docs
+
+[docs](https://www.formidable.com/open-source/spectacle/docs/themes/)
