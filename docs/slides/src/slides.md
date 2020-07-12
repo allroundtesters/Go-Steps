@@ -36,10 +36,12 @@ Typography
 ###### Heading 6
 
 ---
+## Quote
 
 > Example Quote
 
 ---
+## Sample Codes
 
 ```js
 class SuperCoolComponent extends React.Component {

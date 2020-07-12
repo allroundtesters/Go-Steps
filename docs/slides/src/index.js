@@ -5,12 +5,14 @@ import { Box, Deck, FlexBox, FullScreen, Markdown, Progress } from 'spectacle';
 
 
 // SPECTACLE_CLI_MD_START
-import mdContent from './slides.md';
+import mdContent from './go-in-30-minutes.md';
 // SPECTACLE_CLI_MD_END
 
 
 // SPECTACLE_CLI_THEME_START
-const theme = {};
+const theme = {
+  
+};
 // SPECTACLE_CLI_THEME_END
 
 // SPECTACLE_CLI_TEMPLATE_START
